@@ -70,32 +70,32 @@
     text-decoration:underline;
   }
 
-  .footer-nav{
-    display:flex;
-    flex-direction:row;
-    gap:12px;
+  footer{
     margin-top:28px;
-  }
-  .nav-btn{
-    flex:1;
-    padding:14px 10px;
-    font-size:clamp(0.85rem,2.2vw,1.05rem);
-    border:none;
-    border-radius:14px;
-    background:var(--accent);
-    color:#222;
-    font-weight:bold;
+    font-size:clamp(0.6rem,1.5vw,0.68rem);
+    opacity:0.55;
     text-align:center;
-    text-decoration:none;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    max-width:640px;
   }
-  .nav-btn:active{
-    transform:scale(0.98);
+  footer a{
+    color:inherit;
+    text-decoration:underline;
+    opacity:0.85;
   }
-  .nav-btn.secondary{
-    background:rgba(255,255,255,0.12);
-    color:#fff;
-    box-shadow:none;
+  footer a:active{
+    opacity:1;
+  }
+  footer .footer-links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0;
+    margin:2px 0 0 0;
+  }
+  footer .footer-links a:not(:first-child){
+    border-left:1px solid rgba(255,255,255,0.35);
+    padding-left:14px;
+    margin-left:14px;
   }
 </style>
 </head>
@@ -120,10 +120,12 @@
   <button type="submit">送信する</button>
 </form>
 
-<div class="footer-nav">
-  <a class="nav-btn" href="./index.html">メニューに戻る</a>
-  <a class="nav-btn secondary" href="./privacy-policy.html">プライバシーポリシー</a>
-</div>
+<footer>
+    <p class="footer-links">
+      <a href="./index.html">メニューに戻る</a>
+      <a href="./privacy-policy.html">プライバシーポリシー</a>
+    </p>
+</footer>
 
 </body>
 </html>
