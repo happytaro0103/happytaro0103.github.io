@@ -76,6 +76,18 @@
       opacity: 0.85;
     }
     footer a:active { opacity: 1; }
+    footer .footer-links{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:0;
+      margin:2px 0 0 0;
+    }
+    footer .footer-links a:not(:first-child){
+      border-left:1px solid rgba(255,255,255,0.35);
+      padding-left:14px;
+      margin-left:14px;
+    }
     .enacted-date {
       margin-top: 24px;
       font-size: clamp(0.68rem, 1.7vw, 0.78rem);
@@ -128,7 +140,10 @@
   </main>
 
   <footer>
-    <p><a href="./contact.html">お問い合わせ</a></p>
+    <p class="footer-links">
+      <a href="./index.html">メニュー</a>
+      <a href="./contact.html">お問い合わせ</a>
+    </p>
   </footer>
 </body>
 </html>
