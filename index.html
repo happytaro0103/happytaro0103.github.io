@@ -434,10 +434,17 @@
 footer a:active {
   opacity: 1;
 }
-.footer-links a:not(:last-child)::after{
-  content:"｜";
+footer .footer-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:0;
+  margin:2px 0 0 0;
+}
+footer .footer-links a:not(:first-child){
+  border-left:1px solid rgba(255,255,255,0.35);
+  padding-left:14px;
   margin-left:14px;
-  opacity:0.5;
 }
 
   .chart-wrap{
