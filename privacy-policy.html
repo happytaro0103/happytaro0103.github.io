@@ -19,7 +19,7 @@
       background: var(--bg);
       color: #fff;
       line-height: 1.8;
-      padding: 24px 16px 60px;
+      padding: 24px 16px calc(60px + 52px);
     }
     main {
       max-width: 680px;
@@ -50,30 +50,23 @@
       text-decoration: underline;
     }
     a:active { opacity: 0.8; }
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 20px;
-      font-size: clamp(0.68rem, 1.8vw, 0.8rem);
-      background: rgba(255,255,255,0.15);
-      padding: 6px 14px;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-    .back-btn:active { transform: scale(0.97); }
     footer {
-      margin-top: 20px;
-      font-size: clamp(0.6rem, 1.5vw, 0.68rem);
-      opacity: 0.55;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10,61,46,0.95);
+      backdrop-filter: blur(4px);
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+      font-size: clamp(0.65rem, 1.7vw, 0.75rem);
       text-align: center;
-      max-width: 640px;
-      margin-inline: auto;
+      z-index: 20;
     }
     footer a {
-      color: inherit;
+      color: #fff;
       text-decoration: underline;
-      opacity: 0.85;
+      opacity: 0.9;
     }
     footer a:active { opacity: 1; }
     footer .footer-links{
@@ -81,7 +74,8 @@
       justify-content:center;
       align-items:center;
       gap:0;
-      margin:2px 0 0 0;
+      max-width: 640px;
+      margin: 0 auto;
     }
     footer .footer-links a:not(:first-child){
       border-left:1px solid rgba(255,255,255,0.35);
@@ -98,7 +92,6 @@
 </head>
 <body>
   <main>
-    <a class="back-btn" href="./index.html">メニュー</a>
     <h1>プライバシーポリシー</h1>
 
     <p>ブラックジャック基本戦略トレーナー（以下「当サイト」）では、利用者のプライバシーを尊重し、個人情報および利用情報の適切な保護に努めます。</p>
