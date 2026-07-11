@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ | ブラックジャック基本戦略トレーナー</title>
+<style>
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+    background:#0a3d2e;
+    color:#fff;
+    max-width:640px;
+    margin:0 auto;
+    padding:24px 20px 60px;
+    line-height:1.7;
+  }
+  h1{
+    font-size:1.3rem;
+    margin-bottom:16px;
+    color:#f2c14e;
+  }
+  p{
+    margin-bottom:16px;
+    font-size:0.92rem;
+  }
+  label{
+    display:block;
+    margin-bottom:6px;
+    font-size:0.85rem;
+    font-weight:bold;
+  }
+  input, textarea{
+    width:100%;
+    padding:10px 12px;
+    margin-bottom:16px;
+    border:none;
+    border-radius:8px;
+    background:rgba(255,255,255,0.1);
+    color:#fff;
+    font-size:0.9rem;
+    font-family:inherit;
+  }
+  input::placeholder, textarea::placeholder{
+    color:rgba(255,255,255,0.4);
+  }
+  textarea{
+    resize:vertical;
+    min-height:120px;
+  }
+  button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#f2c14e;
+    color:#222;
+    font-weight:bold;
+    font-size:1rem;
+    cursor:pointer;
+  }
+  button:active{
+    transform:scale(0.98);
+  }
+  a{
+    color:#f2c14e;
+    text-decoration:underline;
+  }
+  .back-link{
+    display:inline-block;
+    margin-top:24px;
+    font-size:0.85rem;
+    opacity:0.85;
+  }
+</style>
+</head>
+<body>
+
+<h1>お問い合わせ</h1>
+
+<p>
+アプリの不具合報告、ご意見・ご感想、掲載内容に関するお問い合わせなどは、下記のフォームからお願いいたします。内容を確認の上、必要に応じてご返信いたします。
+</p>
+
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <label for="name">お名前</label>
+  <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+
+  <label for="email">メールアドレス</label>
+  <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+  <label for="message">お問い合わせ内容</label>
+  <textarea id="message" name="message" placeholder="不具合の内容やご意見をご記入ください" required></textarea>
+
+  <button type="submit">送信する</button>
+</form>
+
+<a class="back-link" href="./index.html">&#x2190; トップページに戻る</a>
+
+</body>
+</html>
