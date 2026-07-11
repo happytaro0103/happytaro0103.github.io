@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>お問い合わせ | ブラックジャック基本戦略トレーナー</title>
 <style>
+  :root{
+    --accent:#f2c14e;
+  }
   body{
     font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
     background:#0a3d2e;
@@ -15,61 +18,84 @@
     line-height:1.7;
   }
   h1{
-    font-size:1.3rem;
+    font-size:clamp(1.1rem,3vw,1.3rem);
     margin-bottom:16px;
-    color:#f2c14e;
+    color:var(--accent);
   }
   p{
     margin-bottom:16px;
-    font-size:0.92rem;
+    font-size:clamp(0.82rem,2.2vw,0.92rem);
   }
   label{
     display:block;
     margin-bottom:6px;
-    font-size:0.85rem;
+    font-size:clamp(0.78rem,2vw,0.85rem);
     font-weight:bold;
   }
   input, textarea{
     width:100%;
-    padding:10px 12px;
+    padding:clamp(8px,2vw,10px) clamp(10px,2.5vw,12px);
     margin-bottom:16px;
     border:none;
     border-radius:8px;
     background:rgba(255,255,255,0.1);
     color:#fff;
-    font-size:0.9rem;
+    font-size:clamp(0.85rem,2.2vw,0.9rem);
     font-family:inherit;
+    box-sizing:border-box;
   }
   input::placeholder, textarea::placeholder{
     color:rgba(255,255,255,0.4);
   }
   textarea{
     resize:vertical;
-    min-height:120px;
+    min-height:clamp(100px,25vh,140px);
   }
   button{
     width:100%;
-    padding:14px;
+    padding:clamp(12px,3vw,14px);
     border:none;
     border-radius:10px;
-    background:#f2c14e;
+    background:var(--accent);
     color:#222;
     font-weight:bold;
-    font-size:1rem;
+    font-size:clamp(0.9rem,2.4vw,1rem);
     cursor:pointer;
   }
   button:active{
     transform:scale(0.98);
   }
   a{
-    color:#f2c14e;
+    color:var(--accent);
     text-decoration:underline;
   }
-  .back-link{
-    display:inline-block;
-    margin-top:24px;
-    font-size:0.85rem;
-    opacity:0.85;
+
+  .footer-nav{
+    display:flex;
+    flex-direction:row;
+    gap:12px;
+    margin-top:28px;
+  }
+  .nav-btn{
+    flex:1;
+    padding:14px 10px;
+    font-size:clamp(0.85rem,2.2vw,1.05rem);
+    border:none;
+    border-radius:14px;
+    background:var(--accent);
+    color:#222;
+    font-weight:bold;
+    text-align:center;
+    text-decoration:none;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+  }
+  .nav-btn:active{
+    transform:scale(0.98);
+  }
+  .nav-btn.secondary{
+    background:rgba(255,255,255,0.12);
+    color:#fff;
+    box-shadow:none;
   }
 </style>
 </head>
@@ -94,7 +120,10 @@
   <button type="submit">送信する</button>
 </form>
 
-<a class="back-link" href="./index.html">&#x2190; トップページに戻る</a>
+<div class="footer-nav">
+  <a class="nav-btn" href="./index.html">メニューに戻る</a>
+  <a class="nav-btn secondary" href="./privacy-policy.html">プライバシーポリシー</a>
+</div>
 
 </body>
 </html>
