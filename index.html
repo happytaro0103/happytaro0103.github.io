@@ -418,13 +418,18 @@
     font-weight:bold;
     cursor:pointer;
   }
-  footer{
-    margin-top:4px;
-    font-size:clamp(0.6rem,1.5vw,0.68rem);
-    opacity:0.55;
-    text-align:center;
-    max-width:640px;
-    flex-shrink:0;
+  footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10,61,46,0.95);
+    backdrop-filter: blur(4px);
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding: 10px 16px calc(14px + env(safe-area-inset-bottom));
+    font-size: clamp(0.65rem, 1.7vw, 0.75rem);
+    text-align: center;
+    z-index: 20;
   }
   footer a {
   color: inherit;
