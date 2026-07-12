@@ -428,36 +428,6 @@
     font-weight:bold;
     cursor:pointer;
   }
-footer {
-  flex-shrink: 0;
-  width: 100%;
-  background: rgba(10,61,46,0.95);
-  backdrop-filter: blur(4px);
-  border-top: 1px solid rgba(255,255,255,0.15);
-  padding: 10px 16px;
-  font-size: clamp(0.65rem, 1.7vw, 0.75rem);
-  text-align: center;
-  margin-top: 8px;
-}
-footer a {
-  color: rgba(255,255,255,0.85);
-  text-decoration: underline;
-}
-footer a:active {
-  color: rgba(255,255,255,1);
-}
-footer .footer-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  margin: 0;
-}
-footer .footer-links a:not(:first-child) {
-  border-left: 1px solid rgba(255,255,255,0.35);
-  padding-left: 14px;
-  margin-left: 14px;
-}
 
   .chart-wrap{
     width:100%;
@@ -713,6 +683,37 @@ footer .footer-links a:not(:first-child) {
     <button class="modal-close-btn" id="infoModalCloseBtn">閉じる</button>
   </div>
 </div>
+
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  background: rgba(10,61,46,0.95);
+  backdrop-filter: blur(4px);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding: 10px 16px;
+  font-size: clamp(0.65rem, 1.7vw, 0.75rem);
+  text-align: center;
+  margin-top: 8px;
+}
+footer a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: underline;
+}
+footer a:active {
+  color: rgba(255,255,255,1);
+}
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+}
+footer .footer-links a:not(:first-child) {
+  border-left: 1px solid rgba(255,255,255,0.35);
+  padding-left: 14px;
+  margin-left: 14px;
+}
 
 <script>
 const SUITS = [
