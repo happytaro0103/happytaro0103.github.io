@@ -16,19 +16,20 @@
     html, body {
       margin: 0;
       height: 100%;
+      overflow: hidden;
     }
     body {
-      min-height: 100vh;
-      min-height: 100dvh;
       display: flex;
       flex-direction: column;
       font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
       background: var(--bg);
       color: #fff;
       line-height: 1.8;
+      padding-top: env(safe-area-inset-top);
     }
     .page-content {
       flex: 1;
+      min-height: 0;
       overflow-y: auto;
       padding: 24px 16px 24px;
     }
